@@ -1,0 +1,44 @@
+/* fonts */
+@font-face {
+  font-family: "Alata";
+  src: url("../fonts/Alata-Regular.ttf");
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "JosefinSans-Italic";
+  src: url("../fonts/JosefinSans-Italic-VariableFont_wght.ttf");
+}
+
+:root {
+  /* colours */
+  --clr-White: hsl(0, 0%, 100%);
+  --clr-Black: hsl(0, 0%, 0%);
+  --Dark-Gray: hsl(0, 0%, 55%);
+  --Very-Dark-Gray: hsl(0, 0%, 41%);
+
+  --ff-primary: "Alata", san-serif;
+  --ff-secondary: "JosefinSans", san-serif;
+  --ff-secondary-italic: "JosefinSans-Italic", san-serif;
+
+  /* font sizes */
+  --fs-400: 0.8125rem;
+  --fs-500: 0.9724rem;
+  --fs-900: 2rem;
+
+  /* border radius */
+  --br: 0.5rem;
+
+  // @media (max-width: 500px) {
+  //   --fs-900: 3rem;
+  // }
+}
+
+// @mixin flexCenter($direction) {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: $direction;
+// }

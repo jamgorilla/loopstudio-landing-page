@@ -1,0 +1,53 @@
+.nav-container {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  //   border: 2px solid green;
+}
+
+.logo-wrap {
+  grid-column: 1 / 10;
+}
+
+.hamburger {
+  grid-column: 11 / 12;
+  margin-top: 6px;
+  transition: transform 350ms ease-out;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  background-color: white;
+  height: 3px;
+  width: 30px;
+  transition: transform 350ms ease-in-out;
+}
+
+.hamburger-middle {
+  transform: translateY(0.3rem);
+}
+.hamburger-bottom {
+  transform: translateY(0.6rem);
+}
+
+.top-menu-list {
+  visibility: hidden;
+}
+
+.nav-open .top-menu-list {
+  visibility: visible;
+}
+.nav-open .hamburger {
+  transform: translateY(-0.6rem) rotate(180deg);
+}
+.nav-open .hamburger-top {
+  transform: translateY(0.4rem) rotate(45deg);
+}
+.nav-open .hamburger-middle {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 3s 3s, opacity 500ms ease-in-out;
+}
+.nav-open .hamburger-bottom {
+  transform: rotate(-45deg);
+}

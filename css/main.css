@@ -1,0 +1,222 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* fonts */
+@font-face {
+  font-family: "Alata";
+  src: url("../fonts/Alata-Regular.ttf");
+}
+
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "JosefinSans-Italic";
+  src: url("../fonts/JosefinSans-Italic-VariableFont_wght.ttf");
+}
+
+:root {
+  /* colours */
+  --clr-White: hsl(0, 0%, 100%);
+  --clr-Black: hsl(0, 0%, 0%);
+  --Dark-Gray: hsl(0, 0%, 55%);
+  --Very-Dark-Gray: hsl(0, 0%, 41%);
+  --ff-primary: "Alata", san-serif;
+  --ff-secondary: "JosefinSans", san-serif;
+  --ff-secondary-italic: "JosefinSans-Italic", san-serif;
+  /* font sizes */
+  --fs-400: 0.8125rem;
+  --fs-500: 0.9724rem;
+  --fs-900: 2rem;
+  /* border radius */
+  --br: 0.5rem;
+}
+
+body {
+  color: var(--clr-White);
+  font-family: var(--ff-primary);
+}
+
+.intro {
+  background-image: url("../images/mobile/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem 1.5rem 0rem 1.5rem;
+}
+
+lead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-transform: uppercase;
+  border: 2px solid white;
+  font-family: "JosefinSans";
+  font-weight: 250;
+  font-size: 2.5rem;
+  padding: 1rem 1.5rem 0.5rem 1.5rem;
+  line-height: 2.5rem;
+}
+
+.nav-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[11];
+      grid-template-columns: repeat(11, 1fr);
+}
+
+.logo-wrap {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 9;
+  grid-column: 1 / 10;
+}
+
+.hamburger {
+  -ms-grid-column: 11;
+  -ms-grid-column-span: 1;
+  grid-column: 11 / 12;
+  margin-top: 6px;
+  -webkit-transition: -webkit-transform 350ms ease-out;
+  transition: -webkit-transform 350ms ease-out;
+  transition: transform 350ms ease-out;
+  transition: transform 350ms ease-out, -webkit-transform 350ms ease-out;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  background-color: white;
+  height: 3px;
+  width: 30px;
+  -webkit-transition: -webkit-transform 350ms ease-in-out;
+  transition: -webkit-transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
+}
+
+.hamburger-middle {
+  -webkit-transform: translateY(0.3rem);
+          transform: translateY(0.3rem);
+}
+
+.hamburger-bottom {
+  -webkit-transform: translateY(0.6rem);
+          transform: translateY(0.6rem);
+}
+
+.top-menu-list {
+  visibility: hidden;
+}
+
+.nav-open .top-menu-list {
+  visibility: visible;
+}
+
+.nav-open .hamburger {
+  -webkit-transform: translateY(-0.6rem) rotate(180deg);
+          transform: translateY(-0.6rem) rotate(180deg);
+}
+
+.nav-open .hamburger-top {
+  -webkit-transform: translateY(0.4rem) rotate(45deg);
+          transform: translateY(0.4rem) rotate(45deg);
+}
+
+.nav-open .hamburger-middle {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 3s 3s, opacity 500ms ease-in-out;
+  transition: visibility 3s 3s, opacity 500ms ease-in-out;
+}
+
+.nav-open .hamburger-bottom {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+/*# sourceMappingURL=main.css.map */
