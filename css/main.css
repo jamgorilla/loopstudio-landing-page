@@ -147,8 +147,8 @@ lead {
 .nav-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[11];
-      grid-template-columns: repeat(11, 1fr);
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .logo-wrap {
