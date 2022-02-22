@@ -1,0 +1,44 @@
+.our-creations-list {
+  display: grid;
+  padding: 2rem var(--side-border-padding) 0rem var(--side-border-padding);
+  gap: 1.5rem;
+  & li {
+    display: flex;
+    height: 5rem;
+    width: 100%;
+    height: 8rem;
+    background-size: cover;
+    font-family: var(--ff-secondary);
+    text-transform: uppercase;
+    font-weight: 250;
+    font-size: 1.5rem;
+    align-items: end;
+    line-height: 1.5rem;
+    flex-wrap: wrap;
+    padding: 0rem 0rem 1.5rem 1.5rem;
+  }
+  & li:nth-child(1) {
+    @include img-overlay("../images/mobile/image-deep-earth.jpg");
+  }
+  & li:nth-child(2) {
+    @include img-overlay("../images/mobile/image-night-arcade.jpg");
+  }
+  & li:nth-child(3) {
+    @include img-overlay("../images/mobile/image-soccer-team.jpg");
+  }
+  & li:nth-child(4) {
+    @include img-overlay("../images/mobile/image-grid.jpg");
+  }
+  & li:nth-child(5) {
+    @include img-overlay("../images/mobile/image-from-above.jpg");
+  }
+  & li:nth-child(6) {
+    @include img-overlay("../images/mobile/image-pocket-borealis.jpg");
+  }
+  & li:nth-child(7) {
+    @include img-overlay("../images/mobile/image-curiosity.jpg");
+  }
+  & li:nth-child(8) {
+    @include img-overlay("../images/mobile/image-fisheye.jpg");
+  }
+}

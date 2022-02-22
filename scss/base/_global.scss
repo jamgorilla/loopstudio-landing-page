@@ -5,9 +5,10 @@ body {
 
 .intro {
   background-image: url("../images/mobile/image-hero.jpg");
+  position: relative;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 1rem 1.5rem 0rem 1.5rem;
+  padding: 1rem var(--side-border-padding) 10rem var(--side-border-padding);
 }
 
 lead {
@@ -17,6 +18,48 @@ lead {
   font-family: "JosefinSans";
   font-weight: 250;
   font-size: 2.5rem;
-  padding: 1rem 1.5rem 0.5rem 1.5rem;
+  padding: 1rem var(--side-border-padding) 0.5rem var(--side-border-padding);
   line-height: 2.5rem;
+}
+
+h3 {
+  display: flex;
+  text-transform: uppercase;
+  color: var(--clr-Black);
+  font-family: var(--ff-secondary);
+  font-weight: 250;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-align: center;
+  justify-content: center;
+}
+
+p {
+  display: flex;
+  color: var(--Dark-Gray);
+  text-align: center;
+  font-weight: lighter;
+  padding: 1rem var(--side-border-padding) 6rem var(--side-border-padding);
+}
+
+.image-interactive {
+  padding: 6rem var(--side-border-padding) 3rem var(--side-border-padding);
+}
+
+.flex-btn-order {
+  display: flex;
+  flex-direction: column;
+}
+
+button.see-all {
+  text-transform: uppercase;
+  border: 1px solid var(--clr-Black);
+
+  box-shadow: none;
+  background-color: transparent;
+  font-size: 1.3rem;
+  order: 1;
+  margin: 2rem 7rem 3rem 7rem;
+  padding: 0.5rem 0rem;
+  letter-spacing: 0.2rem;
 }

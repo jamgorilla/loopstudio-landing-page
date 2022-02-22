@@ -9,7 +9,7 @@
 }
 
 .hamburger {
-  grid-column: 11 / 12;
+  grid-column: 12 / 13;
   margin-top: 6px;
   transition: transform 350ms ease-out;
 }
@@ -33,9 +33,21 @@
 .top-menu-list {
   visibility: hidden;
 }
+.nav-open .intro {
+  background-image: none;
+  background-color: black;
+}
+.nav-open lead {
+  opacity: 0;
+}
 
 .nav-open .top-menu-list {
   visibility: visible;
+  margin-top: 4rem;
+  font-family: "JosefinSans";
+  text-transform: uppercase;
+  font-weight: 250;
+  line-height: 2rem;
 }
 .nav-open .hamburger {
   transform: translateY(-0.6rem) rotate(180deg);

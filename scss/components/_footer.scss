@@ -1,0 +1,29 @@
+footer {
+  background-color: var(--clr-Black);
+  display: flex;
+  flex-direction: column;
+
+  .footer-logo-wrap {
+    margin: 3.5rem auto 0rem auto;
+  }
+
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  .social-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+  }
+
+  .footer-copyright {
+    margin: 0 auto;
+  }
+}
