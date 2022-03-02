@@ -1,17 +1,35 @@
 .nav-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(1fr, 12);
   //   border: 2px solid green;
+  @media (min-width: $mobile) {
+    padding-bottom: 5rem;
+  }
 }
 
 .logo-wrap {
   grid-column: 1 / 10;
+  @media (min-width: $mobile) {
+    grid-column: 1 / 5;
+  }
+}
+
+.header-loop-logo {
+  width: 40%;
 }
 
 .hamburger {
   grid-column: 12 / 13;
-  margin-top: 6px;
+  //   display: grid;
+  //   margin-top: 6px;
+  justify-self: center;
+  align-self: center;
   transition: transform 350ms ease-out;
+  //   transform: translateY(16px);
+  @media (min-width: $mobile) {
+    display: none;
+    // grid-column: none;
+  }
 }
 
 .hamburger-top,
@@ -23,15 +41,44 @@
   transition: transform 350ms ease-in-out;
 }
 
-.hamburger-middle {
-  transform: translateY(0.3rem);
+.hamburger-top {
+  transform: translateY(-5px);
 }
 .hamburger-bottom {
-  transform: translateY(0.6rem);
+  transform: translateY(5px);
 }
 
 .top-menu-list {
   visibility: hidden;
+  @media (min-width: $mobile) {
+    visibility: visible;
+    display: flex;
+    grid-column: 6 / 12;
+    justify-content: end;
+    gap: 20px;
+    & li {
+      font-size: 10px;
+    }
+    // & li:hover {
+    //   text-decoration: underline 0.15em;
+    //   text-underline-offset: 1em;
+    // }
+
+    & li::after {
+      content: " ";
+      display: inline-block;
+      background-color: white;
+      height: 2px;
+      // width: 0px;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(-0.25rem);
+      transition: opacity 400ms ease-in;
+    }
+    & li:hover::after {
+      opacity: 1;
+    }
+  }
 }
 .nav-open .intro {
   background-image: none;
@@ -50,10 +97,10 @@
   line-height: 2rem;
 }
 .nav-open .hamburger {
-  transform: translateY(-0.6rem) rotate(180deg);
+  transform: rotate(180deg);
 }
 .nav-open .hamburger-top {
-  transform: translateY(0.4rem) rotate(45deg);
+  transform: translateY(2px) rotate(45deg);
 }
 .nav-open .hamburger-middle {
   visibility: hidden;
@@ -61,5 +108,5 @@
   transition: visibility 3s 3s, opacity 500ms ease-in-out;
 }
 .nav-open .hamburger-bottom {
-  transform: rotate(-45deg);
+  transform: translateY(-4px) rotate(-45deg);
 }

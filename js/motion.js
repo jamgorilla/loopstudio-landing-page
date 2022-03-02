@@ -1,4 +1,3 @@
-console.log('BOO');
 
 const hamburger = document.querySelector(".hamburger");
 

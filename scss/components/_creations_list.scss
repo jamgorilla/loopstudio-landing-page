@@ -1,13 +1,19 @@
 .our-creations-list {
   display: grid;
+  width: 100%;
   padding: 2rem var(--side-border-padding) 0rem var(--side-border-padding);
   gap: 1.5rem;
+  @media (min-width: $mobile) {
+    padding: 0rem var(--desk-side-border-padding) 5rem
+      var(--desk-side-border-padding);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
   & li {
     display: flex;
     height: 5rem;
     width: 100%;
     height: 8rem;
-    background-size: cover;
+    // background-size: cover;
     font-family: var(--ff-secondary);
     text-transform: uppercase;
     font-weight: 250;
@@ -16,29 +22,59 @@
     line-height: 1.5rem;
     flex-wrap: wrap;
     padding: 0rem 0rem 1.5rem 1.5rem;
+    @media (min-width: $mobile) {
+      font-size: 0.9rem;
+      line-height: 1rem;
+      height: 13rem;
+      padding: 0rem 0rem 1rem 1rem;
+    }
   }
   & li:nth-child(1) {
     @include img-overlay("../images/mobile/image-deep-earth.jpg");
+    @media (min-width: $mobile) {
+      @include img-overlay("../images/desktop/image-deep-earth.jpg");
+    }
   }
   & li:nth-child(2) {
     @include img-overlay("../images/mobile/image-night-arcade.jpg");
+    @media (min-width: $mobile) {
+      @include img-overlay("../images/desktop/image-night-arcade.jpg");
+    }
   }
   & li:nth-child(3) {
     @include img-overlay("../images/mobile/image-soccer-team.jpg");
+    @media (min-width: $mobile) {
+      @include img-overlay("../images/desktop/image-soccer-team.jpg");
+    }
   }
   & li:nth-child(4) {
     @include img-overlay("../images/mobile/image-grid.jpg");
+    @media (min-width: $mobile) {
+      @include img-overlay("../images/desktop/image-grid.jpg");
+    }
   }
   & li:nth-child(5) {
     @include img-overlay("../images/mobile/image-from-above.jpg");
+    @media (min-width: $mobile) {
+      @include img-overlay("../images/desktop/image-from-above.jpg");
+    }
   }
   & li:nth-child(6) {
     @include img-overlay("../images/mobile/image-pocket-borealis.jpg");
+    @media (min-width: $mobile) {
+      @include img-overlay("../images/desktop/image-pocket-borealis.jpg");
+    }
   }
   & li:nth-child(7) {
     @include img-overlay("../images/mobile/image-curiosity.jpg");
+    @media (min-width: $mobile) {
+      @include img-overlay("../images/desktop/image-curiosity.jpg");
+    }
   }
   & li:nth-child(8) {
     @include img-overlay("../images/mobile/image-fisheye.jpg");
+    @media (min-width: $mobile) {
+      @include img-overlay("../images/desktop/image-fisheye.jpg");
+    }
   }
 }

@@ -33,14 +33,25 @@
 
   /* left and right side padding */
   --side-border-padding: 1.5rem;
-
+  --desk-side-border-padding: 5rem;
   // @media (max-width: 500px) {
   //   --fs-900: 3rem;
   // }
 }
 
+$mobile: 670px;
+
 @mixin img-overlay($img-url) {
   background: linear-gradient(left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
     url($img-url);
   background-size: cover;
+  &:hover {
+    background: linear-gradient(
+        left,
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0.6)
+      ),
+      url($img-url);
+    background-size: cover;
+  }
 }
