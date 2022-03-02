@@ -747,12 +747,31 @@ footer .footer-list {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  line-height: 2.5rem;
   margin-top: 2rem;
+  -webkit-transform: translateY(-0.7rem);
+          transform: translateY(-0.7rem);
+}
+
+footer .footer-list li::after {
+  content: " ";
+  display: inline-block;
+  background-color: white;
+  height: 2px;
+  width: 100%;
+  opacity: 0;
+  -webkit-transform: translateY(-0.7rem);
+          transform: translateY(-0.7rem);
+  -webkit-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+
+footer .footer-list li:hover::after {
+  opacity: 1;
 }
 
 @media (min-width: 670px) {
   footer .footer-list {
+    line-height: 2.5rem;
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2 / 3;
@@ -769,23 +788,10 @@ footer .footer-list {
             align-items: end;
     font-size: x-small;
     gap: 2rem;
-    -webkit-transform: translateY(-0.7rem);
-            transform: translateY(-0.7rem);
   }
   footer .footer-list li::after {
-    content: " ";
-    display: inline-block;
-    background-color: white;
-    height: 2px;
-    width: 100%;
-    opacity: 0;
     -webkit-transform: translateY(-1.8rem);
             transform: translateY(-1.8rem);
-    -webkit-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-  }
-  footer .footer-list li:hover::after {
-    opacity: 1;
   }
 }
 
@@ -796,7 +802,28 @@ footer .social-list {
       grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
   margin: 0 auto;
-  margin-top: 2.5rem;
+}
+
+footer .social-list li:nth-child(2) .twitter-logo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+footer .social-list li::after {
+  content: " ";
+  display: inline-block;
+  background-color: white;
+  height: 2px;
+  width: 100%;
+  opacity: 0;
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+  -webkit-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+
+footer .social-list li:hover::after {
+  opacity: 1;
 }
 
 @media (min-width: 670px) {
@@ -807,26 +834,7 @@ footer .social-list {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
-    margin-top: 2rem;
-  }
-  footer .social-list li:nth-child(2) .twitter-logo {
-    height: 24px;
-    aspect-ratio: 1 / 1;
-  }
-  footer .social-list li::after {
-    content: " ";
-    display: inline-block;
-    background-color: white;
-    height: 2px;
-    width: 100%;
-    opacity: 0;
-    -webkit-transform: translateY(-0.5rem);
-            transform: translateY(-0.5rem);
-    -webkit-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-  }
-  footer .social-list li:hover::after {
-    opacity: 1;
+    margin-top: 1rem;
   }
 }
 
